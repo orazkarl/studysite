@@ -1,0 +1,32 @@
+{% extends 'mainapp/base.html' %}
+{% block title %}Профиль{% endblock %}
+{% block content %}
+    <main>
+        <h2 class="display-6 text-center mb-4">Изменить профиль</h2>
+        <div class="form">
+            <form action="{% url 'myprofile_update' %}" method="post">
+                {% csrf_token %}
+                <div class="input-group-lg">
+                    <label class="form-label">Имя</label>
+                    <input type="text" class="form-control" name="first_name" value="{{ request.user.first_name }}">
+                </div>
+                <br>
+                <div class="input-group-lg">
+                    <label class="form-label">Фамилия</label>
+                    <input type="text" class="form-control" name="last_name" value="{{ request.user.last_name }}">
+                </div>
+                <br>
+                <div class="input-group-lg">
+                    <label class="form-label">Телефон</label>
+                    <input type="text" class="form-control" name="phone" value="{{ request.user.phone }}">
+                </div>
+                <br>
+                <div class="input-group-lg">
+                    <input type="submit" class="btn btn-primary">
+                </div>
+            </form>
+
+        </div>
+
+    </main>
+{% endblock %}

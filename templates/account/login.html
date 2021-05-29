@@ -1,0 +1,16 @@
+{% extends "account/base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Sign In" %}{% endblock title %}
+{% block content %}
+    <main class="form-login">
+        <form action="{% url 'account_login' %}" method="POST">
+            {% csrf_token %}
+            <h1 class="h3 mb-3 fw-normal">Войти</h1>
+            {{ form.as_p }}
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Войти</button>
+            <p class="mt-5 mb-3 text-muted">Забыли пароль? <a href="{% url 'account_reset_password' %}">Восстановить</a>
+            </p>
+        </form>
+    </main>
+
+{% endblock %}

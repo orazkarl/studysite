@@ -1,0 +1,42 @@
+{% extends 'mainapp/base.html' %}
+{% block title %}Профиль{% endblock %}
+{% block content %}
+    <main>
+        <h2 class="display-6 text-center mb-4">Профиль</h2>
+        <div class="table-responsive">
+            <table class="table">
+                <tbody>
+                <tr>
+                    <th scope="col" class="text-start">Имя пользователя</th>
+                    <td>{{ request.user.username }}</td>
+                </tr>
+                <tr>
+                    <th scope="col" class="text-start">E-mail</th>
+                    <td>{{ request.user.email }}</td>
+                </tr>
+                <tr>
+                    <th scope="col" class="text-start">Имя</th>
+                    <td>{{ request.user.first_name }}</td>
+                </tr>
+                <tr>
+                    <th scope="col" class="text-start">Фамилия</th>
+                    <td>{{ request.user.last_name }}</td>
+                </tr>
+                <tr>
+                    <th scope="col" class="text-start">Телефон</th>
+                    <td>{{ request.user.phone }}</td>
+                </tr>
+                <tr>
+                    <th scope="col" class="text-start">Роль</th>
+                    <td>{{ request.user.get_role_display }}</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div>
+            <a href="{% url 'myprofile_update' %}" class="btn btn-success">Изменить данные</a>
+            <a href="{% url 'account_change_password' %}" class="btn btn-primary">Сменить пароль</a>
+        </div>
+    </main>
+{% endblock %}

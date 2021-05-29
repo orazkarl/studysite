@@ -1,0 +1,677 @@
+{% extends 'mainapp/base.html' %}
+{% block title %}
+    Главная
+{% endblock %}
+{% block content %}
+    <main>
+        <h2 class="display-6 text-center mb-4">Изменить шаблон</h2>
+
+        <div class="form">
+            <form method="post">
+                {% csrf_token %}
+                <input type="hidden" name="inspector" value="{{ request.user.id }}">
+                <div class="container">
+                    <h6>1. Данные клиента</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Номер заказа 1</label>
+                            <input type="text" name="number_order1" class="form-control" value="{{ object.number_order1 }}">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Номер заказа 2</label>
+                            <input type="text" name="number_order2" class="form-control" value="{{ object.number_order2 }}">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Дата заказа </label>
+                            <input type="date" name="date_order" class="form-control" value="{{ object.date_order|date:"Y-m-d" }}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Имя клиента 1</label>
+                            <input type="text" name="name_client1" class="form-control" value="{{ object.name_client1 }}">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Имя клиента 2</label>
+                            <input type="text" name="name_client2" class="form-control" value="{{ object.name_client2 }}">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Имя клиента 3</label>
+                            <input type="text" name="name_client3" class="form-control" value="{{ object.name_client3 }}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Дата</label>
+                            <input type="date" name="date_client" class="form-control" value="{{ object.date_client|date:"Y-m-d" }}">
+                        </div>
+                        <div class="col-md-6">
+                            <label>Электронная почта</label>
+                            <input type="email" name="email" class="form-control" value="{{ object.email }}">
+                        </div>
+
+                    </div>
+                </div>
+                <hr>
+                <div class="container">
+                    <h6>2. Данные проекта</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Номер проекта 1</label>
+                            <input type="text" name="number_project1" class="form-control" value="{{ object.number_project1 }}">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Имя проекта</label>
+                            <input type="text" name="name_project" class="form-control" value="{{ object.name_project }}">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Дата установки</label>
+                            <input type="date" name="date_install" class="form-control" value="{{ object.date_install|date:"Y-m-d" }}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Адрес проекта</label>
+                            <input type="text" name="address_project" class="form-control" value="{{ object.address_project }}">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Дата</label>
+                            <input type="date" name="date_project" class="form-control" value="{{ object.date_project|date:"Y-m-d" }}">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Имя клиента 4</label>
+                            <input type="text" name="name_client4" class="form-control" value="{{ object.name_client4 }}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label>Состояние проекта (готов/начальная стадия/завершение)</label>
+                            <input type="text" name="status_project" class="form-control" value="{{ object.status_project }}">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container">
+                    <h6>3. Заявка заказчика</h6>
+                    <div class="row ">
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <label>Мы</label>
+                                <input type="text" name="text1" class="form-control" style="margin-left: 5px" value="{{ object.text1 }}">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="input-group">
+                                <label>установщики и представители от (компании)</label>
+                                <input type="text" name="text2" class="form-control" style="margin-left: 5px" value="{{ object.text2 }}">
+                            </div>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <label>Подтверждаем полное завершение установочных работ системы</label>
+                                <input type="text" name="text3" class="form-control" style="margin-left: 5px" value="{{ object.text3 }}">
+                            </div>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <label>Дата</label>
+                                <input type="date" name="date_text" class="form-control" style="margin-left: 5px" value="{{ object.date_text|date:"Y-m-d" }}">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <label>Компания</label>
+                                <input type="text" name="company" class="form-control" style="margin-left: 5px" value="{{ object.company }}">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <label>Установщик</label>
+                                <input type="text" name="installer" class="form-control" style="margin-left: 5px" value="{{ object.installer }}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container">
+                    <h6>Таблица номер 1</h6>
+                    <table class="table table-light">
+                        <thead>
+                        <tr>
+                            <th scope="col">Тема</th>
+                            <th scope="col">инфо</th>
+                            <th scope="col">Ответы 1</th>
+                            <th scope="col">Заметки</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Данные 1</td>
+                            <td>
+                                <table class="table">
+                                    <tr>
+                                        <td>инфо</td>
+                                    </tr>
+                                    <tr>
+                                        <td>инфо</td>
+                                    </tr>
+                                    <tr>
+                                        <td>инфо</td>
+                                    </tr>
+                                    <tr>
+                                        <td>инфо</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table class="table table-light">
+                                    <tr>
+                                        <td><input type="radio" value="Да" name="theme1_info1_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme1_info1_answer"{% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme1_info1_answer"{% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> М/б</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" value="Да" name="theme1_info2_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme1_info2_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme1_info2_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> М/б</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" value="Да" name="theme1_info3_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme1_info3_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme1_info3_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> М/б</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" value="Да" name="theme1_info4_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme1_info4_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme1_info4_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> М/б</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table class="table">
+                                    <tr>
+                                        <td><input type="text" name="theme1_info1_note" class="form-control"
+                                                   style="height: 24px"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="theme1_info2_note" class="form-control"
+                                                   style="height: 24px"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="theme1_info3_note" class="form-control"
+                                                   style="height: 24px"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="theme1_info4_note" class="form-control"
+                                                   style="height: 24px"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Данные 2</td>
+                            <td>
+                                <table class="table">
+                                    <tr>
+                                        <td>инфо</td>
+                                    </tr>
+                                    <tr>
+                                        <td>инфо</td>
+                                    </tr>
+                                    <tr>
+                                        <td>инфо</td>
+                                    </tr>
+                                    <tr>
+                                        <td>инфо</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table class="table table-light">
+                                    <tr>
+                                        <td><input type="radio" value="Да" name="theme2_info1_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme2_info1_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme2_info1_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> М/б</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" value="Да" name="theme2_info2_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme2_info2_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme2_info2_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> М/б</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" value="Да" name="theme2_info3_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme2_info3_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme2_info3_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> М/б</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" value="Да" name="theme2_info4_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme2_info4_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme2_info4_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> М/б</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table class="table">
+                                    <tr>
+                                        <td><input type="text" name="theme2_info1_note" class="form-control"
+                                                   style="height: 24px"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="theme2_info2_note" class="form-control"
+                                                   style="height: 24px"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="theme2_info3_note" class="form-control"
+                                                   style="height: 24px"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="theme2_info4_note" class="form-control"
+                                                   style="height: 24px"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Данные 3</td>
+                            <td>
+                                <table class="table">
+                                    <tr>
+                                        <td>инфо</td>
+                                    </tr>
+                                    <tr>
+                                        <td>инфо</td>
+                                    </tr>
+                                    <tr>
+                                        <td>инфо</td>
+                                    </tr>
+                                    <tr>
+                                        <td>инфо</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table class="table table-light">
+                                    <tr>
+                                        <td><input type="radio" value="Да" name="theme3_info1_answer"> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme3_info1_answer"> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme3_info1_answer"> М/б</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" value="Да" name="theme3_info2_answer"> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme3_info2_answer"> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme3_info2_answer"> М/б</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" value="Да" name="theme3_info3_answer"> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme3_info3_answer"> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme3_info3_answer"> М/б</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" value="Да" name="theme3_info4_answer"> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme3_info4_answer"> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme3_info4_answer"> М/б</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table class="table">
+                                    <tr>
+                                        <td><input type="text" name="theme3_info1_note" class="form-control"
+                                                   style="height: 24px"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="theme3_info2_note" class="form-control"
+                                                   style="height: 24px"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="theme3_info3_note" class="form-control"
+                                                   style="height: 24px"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="theme3_info4_note" class="form-control"
+                                                   style="height: 24px"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Данные 4</td>
+                            <td>
+                                <table class="table">
+                                    <tr>
+                                        <td>инфо</td>
+                                    </tr>
+                                    <tr>
+                                        <td>инфо</td>
+                                    </tr>
+                                    <tr>
+                                        <td>инфо</td>
+                                    </tr>
+                                    <tr>
+                                        <td>инфо</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table class="table table-light">
+                                    <tr>
+                                        <td><input type="radio" value="Да" name="theme4_info1_answer"> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme4_info1_answer"> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme4_info1_answer"> М/б</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" value="Да" name="theme4_info2_answer"> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme4_info2_answer"> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme4_info2_answer"> М/б</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" value="Да" name="theme4_info3_answer"> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme4_info3_answer"> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme4_info3_answer"> М/б</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" value="Да" name="theme4_info4_answer"> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme4_info4_answer"> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme4_info4_answer"> М/б</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table class="table">
+                                    <tr>
+                                        <td><input type="text" name="theme4_info1_note" class="form-control"
+                                                   style="height: 24px"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="theme4_info2_note" class="form-control"
+                                                   style="height: 24px"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="theme4_info3_note" class="form-control"
+                                                   style="height: 24px"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="theme4_info4_note" class="form-control"
+                                                   style="height: 24px"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Данные 5</td>
+                            <td>
+                                <table class="table">
+                                    <tr>
+                                        <td>инфо</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table class="table table-light">
+                                    <tr>
+                                        <td><input type="radio" value="Да" name="theme5_info1_answer"> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme5_info1_answer"> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme5_info1_answer"> М/б</td>
+                                    </tr>
+
+                                </table>
+                            </td>
+                            <td>
+                                <table class="table">
+                                    <tr>
+                                        <td><input type="text" name="theme5_info1_note" class="form-control"
+                                                   style="height: 24px"></td>
+                                    </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Имя инспектора 1</label>
+                            <input type="text" name="table2_name_inspector_1" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Дата</label>
+                            <input type="date" name="table2_date_1" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Подпись </label>
+                            <input type="text" name="table2_signature_1" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Имя инспектора 2</label>
+                            <input type="text" name="table2_name_inspector_2" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Дата </label>
+                            <input type="date" name="table2_date_2" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Подпись </label>
+                            <input type="text" name="table2_signature_2" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <label>Номер заказа</label>
+                                <input type="text" name="number_order3" class="form-control" style="margin-left: 5px">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <label>Номер 1</label>
+                                <input type="text" name="number1" class="form-control" style="margin-left: 5px">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <hr>
+
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <label>Имя инспектора</label>
+                                <input type="text" name="name_inspector1" class="form-control" style="margin-left: 5px">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <label>Дата</label>
+                                <input type="date" name="date_inspector1" class="form-control" style="margin-left: 5px">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <label>Телефон</label>
+                                <input type="text" name="phone_inspector1" class="form-control"
+                                       style="margin-left: 5px">
+                            </div>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="row ">
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <label>Тип2</label>
+                                <input type="text" name="type_inspector1" class="form-control" style="margin-left: 5px">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <label>Подсистема</label>
+                                <input type="text" name="subsystem_inspector1" class="form-control"
+                                       style="margin-left: 5px">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <label>Количество</label>
+                                <input type="text" name="count_inspector1" class="form-control"
+                                       style="margin-left: 5px">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <hr>
+                <div class="container">
+                    <h6>Общие заметки</h6>
+
+                    <div class="row" style="margin-top: 10px">
+                        <div class="input-group">
+                            <label>Тип</label>
+                            <input type="text" name="note1_type" class="form-control" style="margin-left: 5px">
+                            <label style="margin-left: 5px">: A</label>
+                            <input type="text" name="note1_text" class="form-control" style="margin-left: 5px">
+                            <label style="margin-left: 15px"><input type="radio" name="note1_answer1" value="Да">Да
+                                <input type="radio" name="note1_answer1" value="Нет">Нет</label>
+                            <label style="margin-left: 15px">Инфо</label>
+                            <label style="margin-left: 15px"><input type="radio" name="note1_answer2" value="Да">Да
+                                <input type="radio" name="note1_answer2" value="Нет">Нет</label>
+                        </div>
+
+                    </div>
+                    <div class="row" style="margin-top: 10px">
+                        <div class="input-group">
+                            <label>Тип</label>
+                            <input type="text" name="note2_type" class="form-control" style="margin-left: 5px">
+                            <label style="margin-left: 5px">: A</label>
+                            <input type="text" name="note2_text" class="form-control" style="margin-left: 5px">
+                            <label style="margin-left: 15px"><input type="radio" name="note2_answer1" value="Да">Да
+                                <input type="radio" name="note2_answer1" value="Нет">Нет</label>
+                            <label style="margin-left: 15px">Инфо</label>
+                            <label style="margin-left: 15px"><input type="radio" name="note2_answer2" value="Да">Да
+                                <input type="radio" name="note2_answer2" value="Нет">Нет</label>
+                        </div>
+
+                    </div>
+                    <div class="row" style="margin-top: 10px">
+                        <div class="input-group">
+                            <label>Тип</label>
+                            <input type="text" name="note3_type" class="form-control" style="margin-left: 5px">
+                            <label style="margin-left: 5px">: A</label>
+                            <input type="text" name="note3_text" class="form-control" style="margin-left: 5px">
+                            <label style="margin-left: 15px"><input type="radio" name="note3_answer1" value="Да">Да
+                                <input type="radio" name="note3_answer1" value="Нет">Нет</label>
+                            <label style="margin-left: 15px">Инфо</label>
+                            <label style="margin-left: 15px"><input type="radio" name="note3_answer2" value="Да">Да
+                                <input type="radio" name="note3_answer2" value="Нет">Нет</label>
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr>
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <label>Имя инспектора</label>
+                                <input type="text" name="name_inspector2" class="form-control" style="margin-left: 5px">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <label>Дата</label>
+                                <input type="date" name="date_inspector2" class="form-control" style="margin-left: 5px">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <label>Телефон</label>
+                                <input type="text" name="phone_inspector2" class="form-control"
+                                       style="margin-left: 5px">
+                            </div>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="row ">
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <label>Тип2</label>
+                                <input type="text" name="type_inspector2" class="form-control" style="margin-left: 5px">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <label>Подсистема</label>
+                                <input type="text" name="subsystem_inspector2" class="form-control"
+                                       style="margin-left: 5px">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <label>Количество</label>
+                                <input type="text" name="count_inspector2" class="form-control"
+                                       style="margin-left: 5px">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <hr>
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <label>Имя инспектора</label>
+                                <input type="text" name="name_inspector3" class="form-control" style="margin-left: 5px">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <label>Дата</label>
+                                <input type="date" name="date_inspector3" class="form-control" style="margin-left: 5px">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <label>Подпись</label>
+                                <input type="text" name="signature_inspector" class="form-control"
+                                       style="margin-left: 5px">
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr>
+
+
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Сохранить</button>
+
+            </form>
+        </div>
+    </main>
+
+{% endblock %}
