@@ -3,6 +3,17 @@ from django.db import models
 from user_auth.models import User
 
 class Template1(models.Model):
+    ANSWER_TABLE1 = (
+        ('Да', 'Да'),
+        ('Нет', 'Нет'),
+        ('М/б', 'М/б'),
+    )
+
+    ANSWER_GENERAL_NOTES = (
+        ('Да', 'Да'),
+        ('Нет', 'Нет'),
+    )
+
     # Info clients
     number_order1 = models.CharField(max_length=50, null=True, blank=True)
     number_order2 = models.CharField(max_length=50, null=True, blank=True)
@@ -28,43 +39,43 @@ class Template1(models.Model):
     company = models.CharField(max_length=50, null=True, blank=True)
     installer = models.CharField(max_length=50, null=True, blank=True)
     # Table 1
-    theme1_info1_answer = models.CharField(max_length=10, null=True, blank=True)
+    theme1_info1_answer = models.CharField(max_length=10, null=True, blank=True, choices=ANSWER_TABLE1)
     theme1_info1_note = models.CharField(max_length=50, null=True, blank=True)
-    theme1_info2_answer = models.CharField(max_length=10, null=True, blank=True)
+    theme1_info2_answer = models.CharField(max_length=10, null=True, blank=True, choices=ANSWER_TABLE1)
     theme1_info2_note = models.CharField(max_length=50, null=True, blank=True)
-    theme1_info3_answer = models.CharField(max_length=10, null=True, blank=True)
+    theme1_info3_answer = models.CharField(max_length=10, null=True, blank=True, choices=ANSWER_TABLE1)
     theme1_info3_note = models.CharField(max_length=50, null=True, blank=True)
-    theme1_info4_answer = models.CharField(max_length=10, null=True, blank=True)
+    theme1_info4_answer = models.CharField(max_length=10, null=True, blank=True, choices=ANSWER_TABLE1)
     theme1_info4_note = models.CharField(max_length=50, null=True, blank=True)
 
-    theme2_info1_answer = models.CharField(max_length=10, null=True, blank=True)
+    theme2_info1_answer = models.CharField(max_length=10, null=True, blank=True, choices=ANSWER_TABLE1)
     theme2_info1_note = models.CharField(max_length=50, null=True, blank=True)
-    theme2_info2_answer = models.CharField(max_length=10, null=True, blank=True)
+    theme2_info2_answer = models.CharField(max_length=10, null=True, blank=True, choices=ANSWER_TABLE1)
     theme2_info2_note = models.CharField(max_length=50, null=True, blank=True)
-    theme2_info3_answer = models.CharField(max_length=10, null=True, blank=True)
+    theme2_info3_answer = models.CharField(max_length=10, null=True, blank=True, choices=ANSWER_TABLE1)
     theme2_info3_note = models.CharField(max_length=50, null=True, blank=True)
-    theme2_info4_answer = models.CharField(max_length=10, null=True, blank=True)
+    theme2_info4_answer = models.CharField(max_length=10, null=True, blank=True, choices=ANSWER_TABLE1)
     theme2_info4_note = models.CharField(max_length=50, null=True, blank=True)
 
-    theme3_info1_answer = models.CharField(max_length=10, null=True, blank=True)
+    theme3_info1_answer = models.CharField(max_length=10, null=True, blank=True, choices=ANSWER_TABLE1)
     theme3_info1_note = models.CharField(max_length=50, null=True, blank=True)
-    theme3_info2_answer = models.CharField(max_length=10, null=True, blank=True)
+    theme3_info2_answer = models.CharField(max_length=10, null=True, blank=True, choices=ANSWER_TABLE1)
     theme3_info2_note = models.CharField(max_length=50, null=True, blank=True)
-    theme3_info3_answer = models.CharField(max_length=10, null=True, blank=True)
+    theme3_info3_answer = models.CharField(max_length=10, null=True, blank=True, choices=ANSWER_TABLE1)
     theme3_info3_note = models.CharField(max_length=50, null=True, blank=True)
-    theme3_info4_answer = models.CharField(max_length=10, null=True, blank=True)
+    theme3_info4_answer = models.CharField(max_length=10, null=True, blank=True, choices=ANSWER_TABLE1)
     theme3_info4_note = models.CharField(max_length=50, null=True, blank=True)
 
-    theme4_info1_answer = models.CharField(max_length=10, null=True, blank=True)
+    theme4_info1_answer = models.CharField(max_length=10, null=True, blank=True, choices=ANSWER_TABLE1)
     theme4_info1_note = models.CharField(max_length=50, null=True, blank=True)
-    theme4_info2_answer = models.CharField(max_length=10, null=True, blank=True)
+    theme4_info2_answer = models.CharField(max_length=10, null=True, blank=True, choices=ANSWER_TABLE1)
     theme4_info2_note = models.CharField(max_length=50, null=True, blank=True)
-    theme4_info3_answer = models.CharField(max_length=10, null=True, blank=True)
+    theme4_info3_answer = models.CharField(max_length=10, null=True, blank=True, choices=ANSWER_TABLE1)
     theme4_info3_note = models.CharField(max_length=50, null=True, blank=True)
-    theme4_info4_answer = models.CharField(max_length=10, null=True, blank=True)
+    theme4_info4_answer = models.CharField(max_length=10, null=True, blank=True, choices=ANSWER_TABLE1)
     theme4_info4_note = models.CharField(max_length=50, null=True, blank=True)
 
-    theme5_info1_answer = models.CharField(max_length=10, null=True, blank=True)
+    theme5_info1_answer = models.CharField(max_length=10, null=True, blank=True, choices=ANSWER_TABLE1)
     theme5_info1_note = models.CharField(max_length=50, null=True, blank=True)
 
     #Table 2
@@ -88,16 +99,16 @@ class Template1(models.Model):
     # General notes
     note1_type = models.CharField(max_length=50, null=True, blank=True)
     note1_text = models.CharField(max_length=50, null=True, blank=True)
-    note1_answer1 = models.CharField(max_length=50, null=True, blank=True)
-    note1_answer2 = models.CharField(max_length=50, null=True, blank=True)
+    note1_answer1 = models.CharField(max_length=50, null=True, blank=True, choices=ANSWER_GENERAL_NOTES)
+    note1_answer2 = models.CharField(max_length=50, null=True, blank=True, choices=ANSWER_GENERAL_NOTES)
     note2_type = models.CharField(max_length=50, null=True, blank=True)
     note2_text = models.CharField(max_length=50, null=True, blank=True)
-    note2_answer1 = models.CharField(max_length=50, null=True, blank=True)
-    note2_answer2 = models.CharField(max_length=50, null=True, blank=True)
+    note2_answer1 = models.CharField(max_length=50, null=True, blank=True, choices=ANSWER_GENERAL_NOTES)
+    note2_answer2 = models.CharField(max_length=50, null=True, blank=True, choices=ANSWER_GENERAL_NOTES)
     note3_type = models.CharField(max_length=50, null=True, blank=True)
     note3_text = models.CharField(max_length=50, null=True, blank=True)
-    note3_answer1 = models.CharField(max_length=50, null=True, blank=True)
-    note3_answer2 = models.CharField(max_length=50, null=True, blank=True)
+    note3_answer1 = models.CharField(max_length=50, null=True, blank=True, choices=ANSWER_GENERAL_NOTES)
+    note3_answer2 = models.CharField(max_length=50, null=True, blank=True, choices=ANSWER_GENERAL_NOTES)
 
 
     name_inspector2 = models.CharField(max_length=50, null=True, blank=True)

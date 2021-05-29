@@ -181,23 +181,23 @@
                                 <table class="table table-light">
                                     <tr>
                                         <td><input type="radio" value="Да" name="theme1_info1_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Да</td>
-                                        <td><input type="radio" value="Нет" name="theme1_info1_answer"{% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Нет</td>
-                                        <td><input type="radio" value="М/б" name="theme1_info1_answer"{% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> М/б</td>
+                                        <td><input type="radio" value="Нет" name="theme1_info1_answer"{% if object.theme1_info1_answer == 'Нет' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme1_info1_answer"{% if object.theme1_info1_answer == 'М/б' %}checked{% endif %}> М/б</td>
                                     </tr>
                                     <tr>
-                                        <td><input type="radio" value="Да" name="theme1_info2_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Да</td>
-                                        <td><input type="radio" value="Нет" name="theme1_info2_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Нет</td>
-                                        <td><input type="radio" value="М/б" name="theme1_info2_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> М/б</td>
+                                        <td><input type="radio" value="Да" name="theme1_info2_answer" {% if object.theme1_info2_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme1_info2_answer" {% if object.theme1_info2_answer == 'Нет' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme1_info2_answer" {% if object.theme1_info2_answer == 'М/б' %}checked{% endif %}> М/б</td>
                                     </tr>
                                     <tr>
-                                        <td><input type="radio" value="Да" name="theme1_info3_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Да</td>
-                                        <td><input type="radio" value="Нет" name="theme1_info3_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Нет</td>
-                                        <td><input type="radio" value="М/б" name="theme1_info3_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> М/б</td>
+                                        <td><input type="radio" value="Да" name="theme1_info3_answer" {% if object.theme1_info3_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme1_info3_answer" {% if object.theme1_info3_answer == 'Нет' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme1_info3_answer" {% if object.theme1_info3_answer == 'М/б' %}checked{% endif %}> М/б</td>
                                     </tr>
                                     <tr>
-                                        <td><input type="radio" value="Да" name="theme1_info4_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Да</td>
-                                        <td><input type="radio" value="Нет" name="theme1_info4_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Нет</td>
-                                        <td><input type="radio" value="М/б" name="theme1_info4_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> М/б</td>
+                                        <td><input type="radio" value="Да" name="theme1_info4_answer" {% if object.theme1_info4_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme1_info4_answer" {% if object.theme1_info4_answer == 'Нет' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme1_info4_answer" {% if object.theme1_info4_answer == 'М/б' %}checked{% endif %}> М/б</td>
                                     </tr>
                                 </table>
                             </td>
@@ -205,19 +205,18 @@
                                 <table class="table">
                                     <tr>
                                         <td><input type="text" name="theme1_info1_note" class="form-control"
-                                                   style="height: 24px"></td>
+                                                   style="height: 24px" value="{{ object.theme1_info1_note }}"></td>
                                     </tr>
                                     <tr>
                                         <td><input type="text" name="theme1_info2_note" class="form-control"
-                                                   style="height: 24px"></td>
+                                                   style="height: 24px" value="{{ object.theme1_info2_note }}"></td>
                                     </tr>
                                     <tr>
-                                        <td><input type="text" name="theme1_info3_note" class="form-control"
-                                                   style="height: 24px"></td>
+                                        <td><input type="text" name="theme1_info3_note" class="form-control" style="height: 24px" value="{{ object.theme1_info3_note }}"></td>
                                     </tr>
                                     <tr>
                                         <td><input type="text" name="theme1_info4_note" class="form-control"
-                                                   style="height: 24px"></td>
+                                                   style="height: 24px" value="{{ object.theme1_info4_note }}"></td>
                                     </tr>
                                 </table>
                             </td>
@@ -243,24 +242,24 @@
                             <td>
                                 <table class="table table-light">
                                     <tr>
-                                        <td><input type="radio" value="Да" name="theme2_info1_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Да</td>
-                                        <td><input type="radio" value="Нет" name="theme2_info1_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Нет</td>
-                                        <td><input type="radio" value="М/б" name="theme2_info1_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> М/б</td>
+                                        <td><input type="radio" value="Да" name="theme2_info1_answer" {% if object.theme2_info1_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme2_info1_answer" {% if object.theme2_info1_answer == 'Нет' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme2_info1_answer" {% if object.theme2_info1_answer == 'М/б' %}checked{% endif %}> М/б</td>
                                     </tr>
                                     <tr>
-                                        <td><input type="radio" value="Да" name="theme2_info2_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Да</td>
-                                        <td><input type="radio" value="Нет" name="theme2_info2_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Нет</td>
-                                        <td><input type="radio" value="М/б" name="theme2_info2_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> М/б</td>
+                                        <td><input type="radio" value="Да" name="theme2_info2_answer" {% if object.theme2_info2_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme2_info2_answer" {% if object.theme2_info2_answer == 'Нет' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme2_info2_answer" {% if object.theme2_info2_answer == 'М/б' %}checked{% endif %}> М/б</td>
                                     </tr>
                                     <tr>
-                                        <td><input type="radio" value="Да" name="theme2_info3_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Да</td>
-                                        <td><input type="radio" value="Нет" name="theme2_info3_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Нет</td>
-                                        <td><input type="radio" value="М/б" name="theme2_info3_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> М/б</td>
+                                        <td><input type="radio" value="Да" name="theme2_info3_answer" {% if object.theme2_info3_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme2_info3_answer" {% if object.theme2_info3_answer == 'Нет' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme2_info3_answer" {% if object.theme2_info3_answer == 'М/б' %}checked{% endif %}> М/б</td>
                                     </tr>
                                     <tr>
-                                        <td><input type="radio" value="Да" name="theme2_info4_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Да</td>
-                                        <td><input type="radio" value="Нет" name="theme2_info4_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> Нет</td>
-                                        <td><input type="radio" value="М/б" name="theme2_info4_answer" {% if object.theme1_info1_answer == 'Да' %}checked{% endif %}> М/б</td>
+                                        <td><input type="radio" value="Да" name="theme2_info4_answer" {% if object.theme2_info4_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme2_info4_answer" {% if object.theme2_info4_answer == 'Да' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme2_info4_answer" {% if object.theme2_info4_answer == 'М/б' %}checked{% endif %}> М/б</td>
                                     </tr>
                                 </table>
                             </td>
@@ -268,19 +267,19 @@
                                 <table class="table">
                                     <tr>
                                         <td><input type="text" name="theme2_info1_note" class="form-control"
-                                                   style="height: 24px"></td>
+                                                   style="height: 24px" value="{{ object.theme2_info1_note }}"></td>
                                     </tr>
                                     <tr>
                                         <td><input type="text" name="theme2_info2_note" class="form-control"
-                                                   style="height: 24px"></td>
+                                                   style="height: 24px" value="{{ object.theme2_info2_note }}"></td>
                                     </tr>
                                     <tr>
                                         <td><input type="text" name="theme2_info3_note" class="form-control"
-                                                   style="height: 24px"></td>
+                                                   style="height: 24px" value="{{ object.theme2_info3_note }}"></td>
                                     </tr>
                                     <tr>
                                         <td><input type="text" name="theme2_info4_note" class="form-control"
-                                                   style="height: 24px"></td>
+                                                   style="height: 24px" value="{{ object.theme2_info4_note }}"></td>
                                     </tr>
                                 </table>
                             </td>
@@ -306,24 +305,24 @@
                             <td>
                                 <table class="table table-light">
                                     <tr>
-                                        <td><input type="radio" value="Да" name="theme3_info1_answer"> Да</td>
-                                        <td><input type="radio" value="Нет" name="theme3_info1_answer"> Нет</td>
-                                        <td><input type="radio" value="М/б" name="theme3_info1_answer"> М/б</td>
+                                        <td><input type="radio" value="Да" name="theme3_info1_answer" {% if object.theme3_info1_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme3_info1_answer" {% if object.theme3_info1_answer == 'Нет' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme3_info1_answer" {% if object.theme3_info1_answer == 'М/б' %}checked{% endif %}> М/б</td>
                                     </tr>
                                     <tr>
-                                        <td><input type="radio" value="Да" name="theme3_info2_answer"> Да</td>
-                                        <td><input type="radio" value="Нет" name="theme3_info2_answer"> Нет</td>
-                                        <td><input type="radio" value="М/б" name="theme3_info2_answer"> М/б</td>
+                                        <td><input type="radio" value="Да" name="theme3_info2_answer" {% if object.theme3_info2_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme3_info2_answer" {% if object.theme3_info2_answer == 'Нет' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme3_info2_answer" {% if object.theme3_info2_answer == 'М/б' %}checked{% endif %}> М/б</td>
                                     </tr>
                                     <tr>
-                                        <td><input type="radio" value="Да" name="theme3_info3_answer"> Да</td>
-                                        <td><input type="radio" value="Нет" name="theme3_info3_answer"> Нет</td>
-                                        <td><input type="radio" value="М/б" name="theme3_info3_answer"> М/б</td>
+                                        <td><input type="radio" value="Да" name="theme3_info3_answer" {% if object.theme3_info3_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme3_info3_answer" {% if object.theme3_info3_answer == 'Нет' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme3_info3_answer" {% if object.theme3_info3_answer == 'М/б' %}checked{% endif %}> М/б</td>
                                     </tr>
                                     <tr>
-                                        <td><input type="radio" value="Да" name="theme3_info4_answer"> Да</td>
-                                        <td><input type="radio" value="Нет" name="theme3_info4_answer"> Нет</td>
-                                        <td><input type="radio" value="М/б" name="theme3_info4_answer"> М/б</td>
+                                        <td><input type="radio" value="Да" name="theme3_info4_answer" {% if object.theme3_info4_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme3_info4_answer" {% if object.theme3_info4_answer == 'Нет' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme3_info4_answer" {% if object.theme3_info4_answer == 'М/б' %}checked{% endif %}> М/б</td>
                                     </tr>
                                 </table>
                             </td>
@@ -331,19 +330,19 @@
                                 <table class="table">
                                     <tr>
                                         <td><input type="text" name="theme3_info1_note" class="form-control"
-                                                   style="height: 24px"></td>
+                                                   style="height: 24px" value="{{ object.theme3_info1_note }}"></td>
                                     </tr>
                                     <tr>
                                         <td><input type="text" name="theme3_info2_note" class="form-control"
-                                                   style="height: 24px"></td>
+                                                   style="height: 24px" value="{{ object.theme3_info2_note }}"></td>
                                     </tr>
                                     <tr>
                                         <td><input type="text" name="theme3_info3_note" class="form-control"
-                                                   style="height: 24px"></td>
+                                                   style="height: 24px" value="{{ object.theme3_info3_note }}"></td>
                                     </tr>
                                     <tr>
                                         <td><input type="text" name="theme3_info4_note" class="form-control"
-                                                   style="height: 24px"></td>
+                                                   style="height: 24px" value="{{ object.theme3_info4_note }}"></td>
                                     </tr>
                                 </table>
                             </td>
@@ -369,24 +368,24 @@
                             <td>
                                 <table class="table table-light">
                                     <tr>
-                                        <td><input type="radio" value="Да" name="theme4_info1_answer"> Да</td>
-                                        <td><input type="radio" value="Нет" name="theme4_info1_answer"> Нет</td>
-                                        <td><input type="radio" value="М/б" name="theme4_info1_answer"> М/б</td>
+                                        <td><input type="radio" value="Да" name="theme4_info1_answer" {% if object.theme4_info1_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme4_info1_answer" {% if object.theme4_info1_answer == 'Нет' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme4_info1_answer" {% if object.theme4_info1_answer == 'М/б' %}checked{% endif %}> М/б</td>
                                     </tr>
                                     <tr>
-                                        <td><input type="radio" value="Да" name="theme4_info2_answer"> Да</td>
-                                        <td><input type="radio" value="Нет" name="theme4_info2_answer"> Нет</td>
-                                        <td><input type="radio" value="М/б" name="theme4_info2_answer"> М/б</td>
+                                        <td><input type="radio" value="Да" name="theme4_info2_answer" {% if object.theme4_info2_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme4_info2_answer" {% if object.theme4_info2_answer == 'Нет' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme4_info2_answer" {% if object.theme4_info2_answer == 'М/б' %}checked{% endif %}> М/б</td>
                                     </tr>
                                     <tr>
-                                        <td><input type="radio" value="Да" name="theme4_info3_answer"> Да</td>
-                                        <td><input type="radio" value="Нет" name="theme4_info3_answer"> Нет</td>
-                                        <td><input type="radio" value="М/б" name="theme4_info3_answer"> М/б</td>
+                                        <td><input type="radio" value="Да" name="theme4_info3_answer" {% if object.theme4_info3_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme4_info3_answer" {% if object.theme4_info3_answer == 'Нет' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme4_info3_answer" {% if object.theme4_info3_answer == 'М/б' %}checked{% endif %}> М/б</td>
                                     </tr>
                                     <tr>
-                                        <td><input type="radio" value="Да" name="theme4_info4_answer"> Да</td>
-                                        <td><input type="radio" value="Нет" name="theme4_info4_answer"> Нет</td>
-                                        <td><input type="radio" value="М/б" name="theme4_info4_answer"> М/б</td>
+                                        <td><input type="radio" value="Да" name="theme4_info4_answer" {% if object.theme4_info4_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme4_info4_answer" {% if object.theme4_info4_answer == 'Нет' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme4_info4_answer" {% if object.theme4_info4_answer == 'М/б' %}checked{% endif %}> М/б</td>
                                     </tr>
                                 </table>
                             </td>
@@ -394,19 +393,19 @@
                                 <table class="table">
                                     <tr>
                                         <td><input type="text" name="theme4_info1_note" class="form-control"
-                                                   style="height: 24px"></td>
+                                                   style="height: 24px" value="{{ object.theme4_info1_note }}"></td>
                                     </tr>
                                     <tr>
                                         <td><input type="text" name="theme4_info2_note" class="form-control"
-                                                   style="height: 24px"></td>
+                                                   style="height: 24px" value="{{ object.theme4_info2_note }}"></td>
                                     </tr>
                                     <tr>
                                         <td><input type="text" name="theme4_info3_note" class="form-control"
-                                                   style="height: 24px"></td>
+                                                   style="height: 24px" value="{{ object.theme4_info3_note }}"></td>
                                     </tr>
                                     <tr>
                                         <td><input type="text" name="theme4_info4_note" class="form-control"
-                                                   style="height: 24px"></td>
+                                                   style="height: 24px" value="{{ object.theme4_info4_note }}"></td>
                                     </tr>
                                 </table>
                             </td>
@@ -423,9 +422,9 @@
                             <td>
                                 <table class="table table-light">
                                     <tr>
-                                        <td><input type="radio" value="Да" name="theme5_info1_answer"> Да</td>
-                                        <td><input type="radio" value="Нет" name="theme5_info1_answer"> Нет</td>
-                                        <td><input type="radio" value="М/б" name="theme5_info1_answer"> М/б</td>
+                                        <td><input type="radio" value="Да" name="theme5_info1_answer" {% if object.theme5_info1_answer == 'Да' %}checked{% endif %}> Да</td>
+                                        <td><input type="radio" value="Нет" name="theme5_info1_answer" {% if object.theme5_info1_answer == 'Нет' %}checked{% endif %}> Нет</td>
+                                        <td><input type="radio" value="М/б" name="theme5_info1_answer" {% if object.theme5_info1_answer == 'М/б' %}checked{% endif %}> М/б</td>
                                     </tr>
 
                                 </table>
@@ -434,7 +433,7 @@
                                 <table class="table">
                                     <tr>
                                         <td><input type="text" name="theme5_info1_note" class="form-control"
-                                                   style="height: 24px"></td>
+                                                   style="height: 24px" value="{{ object.theme5_info1_note }}"></td>
                                     </tr>
 
                                 </table>
@@ -448,29 +447,29 @@
                     <div class="row">
                         <div class="col-md-4">
                             <label>Имя инспектора 1</label>
-                            <input type="text" name="table2_name_inspector_1" class="form-control">
+                            <input type="text" name="table2_name_inspector1" class="form-control" value="{{ object.table2_name_inspector1 }}">
                         </div>
                         <div class="col-md-4">
                             <label>Дата</label>
-                            <input type="date" name="table2_date_1" class="form-control">
+                            <input type="date" name="table2_date1" class="form-control" value="{{ object.table2_date1|date:"Y-m-d" }}">
                         </div>
                         <div class="col-md-4">
                             <label>Подпись </label>
-                            <input type="text" name="table2_signature_1" class="form-control">
+                            <input type="text" name="table2_signature1" class="form-control" value="{{ object.table2_name_inspector1 }}">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
                             <label>Имя инспектора 2</label>
-                            <input type="text" name="table2_name_inspector_2" class="form-control">
+                            <input type="text" name="table2_name_inspector2" class="form-control" value="{{ object.table2_name_inspector2 }}">
                         </div>
                         <div class="col-md-4">
                             <label>Дата </label>
-                            <input type="date" name="table2_date_2" class="form-control">
+                            <input type="date" name="table2_date2" class="form-control" value="{{ object.table2_date2|date:"Y-m-d" }}">
                         </div>
                         <div class="col-md-4">
                             <label>Подпись </label>
-                            <input type="text" name="table2_signature_2" class="form-control">
+                            <input type="text" name="table2_signature2" class="form-control" value="{{ object.table2_signature2 }}">
                         </div>
                     </div>
                 </div>
@@ -480,13 +479,13 @@
                         <div class="col-md-6">
                             <div class="input-group">
                                 <label>Номер заказа</label>
-                                <input type="text" name="number_order3" class="form-control" style="margin-left: 5px">
+                                <input type="text" name="number_order3" class="form-control" style="margin-left: 5px" value="{{ object.number_order3 }}">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="input-group">
                                 <label>Номер 1</label>
-                                <input type="text" name="number1" class="form-control" style="margin-left: 5px">
+                                <input type="text" name="number1" class="form-control" style="margin-left: 5px" value="{{ object.number1 }}">
                             </div>
                         </div>
 
@@ -499,20 +498,20 @@
                         <div class="col-md-4">
                             <div class="input-group">
                                 <label>Имя инспектора</label>
-                                <input type="text" name="name_inspector1" class="form-control" style="margin-left: 5px">
+                                <input type="text" name="name_inspector1" class="form-control" style="margin-left: 5px" value="{{ object.name_inspector1 }}">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="input-group">
                                 <label>Дата</label>
-                                <input type="date" name="date_inspector1" class="form-control" style="margin-left: 5px">
+                                <input type="date" name="date_inspector1" class="form-control" style="margin-left: 5px" value="{{ object.date_inspector1|date:"Y-m-d" }}">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="input-group">
                                 <label>Телефон</label>
                                 <input type="text" name="phone_inspector1" class="form-control"
-                                       style="margin-left: 5px">
+                                       style="margin-left: 5px" value="{{ object.phone_inspector1 }}">
                             </div>
                         </div>
 
@@ -522,21 +521,21 @@
                         <div class="col-md-4">
                             <div class="input-group">
                                 <label>Тип2</label>
-                                <input type="text" name="type_inspector1" class="form-control" style="margin-left: 5px">
+                                <input type="text" name="type_inspector1" class="form-control" style="margin-left: 5px" value="{{ object.type_inspector1 }}">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="input-group">
                                 <label>Подсистема</label>
                                 <input type="text" name="subsystem_inspector1" class="form-control"
-                                       style="margin-left: 5px">
+                                       style="margin-left: 5px" value="{{ object.subsystem_inspector1 }}">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="input-group">
                                 <label>Количество</label>
                                 <input type="text" name="count_inspector1" class="form-control"
-                                       style="margin-left: 5px">
+                                       style="margin-left: 5px" value="{{ object.count_inspector1 }}">
                             </div>
                         </div>
                     </div>
@@ -549,42 +548,42 @@
                     <div class="row" style="margin-top: 10px">
                         <div class="input-group">
                             <label>Тип</label>
-                            <input type="text" name="note1_type" class="form-control" style="margin-left: 5px">
+                            <input type="text" name="note1_type" class="form-control" style="margin-left: 5px" value="{{ object.note1_type }}">
                             <label style="margin-left: 5px">: A</label>
-                            <input type="text" name="note1_text" class="form-control" style="margin-left: 5px">
-                            <label style="margin-left: 15px"><input type="radio" name="note1_answer1" value="Да">Да
-                                <input type="radio" name="note1_answer1" value="Нет">Нет</label>
+                            <input type="text" name="note1_text" class="form-control" style="margin-left: 5px" value="{{ object.note1_text }}">
+                            <label style="margin-left: 15px"><input type="radio" name="note1_answer1" value="Да" {% if object.note1_answer1 == 'Да' %}checked{% endif %}>Да
+                                <input type="radio" name="note1_answer1" value="Нет" {% if object.note1_answer1 == 'Нет' %}checked{% endif %}>Нет</label>
                             <label style="margin-left: 15px">Инфо</label>
-                            <label style="margin-left: 15px"><input type="radio" name="note1_answer2" value="Да">Да
-                                <input type="radio" name="note1_answer2" value="Нет">Нет</label>
+                            <label style="margin-left: 15px"><input type="radio" name="note1_answer2" value="Да" {% if object.note1_answer2 == 'Да' %}checked{% endif %}>Да
+                                <input type="radio" name="note1_answer2" value="Нет" {% if object.note1_answer2 == 'Нет' %}checked{% endif %}>Нет</label>
                         </div>
 
                     </div>
                     <div class="row" style="margin-top: 10px">
                         <div class="input-group">
                             <label>Тип</label>
-                            <input type="text" name="note2_type" class="form-control" style="margin-left: 5px">
+                            <input type="text" name="note2_type" class="form-control" style="margin-left: 5px" value="{{ object.note2_type }}" >
                             <label style="margin-left: 5px">: A</label>
-                            <input type="text" name="note2_text" class="form-control" style="margin-left: 5px">
-                            <label style="margin-left: 15px"><input type="radio" name="note2_answer1" value="Да">Да
-                                <input type="radio" name="note2_answer1" value="Нет">Нет</label>
+                            <input type="text" name="note2_text" class="form-control" style="margin-left: 5px" value="{{ object.note2_text }}">
+                            <label style="margin-left: 15px"><input type="radio" name="note2_answer1" value="Да" {% if object.note2_answer1 == 'Да' %}checked{% endif %}>Да
+                                <input type="radio" name="note2_answer1" value="Нет" {% if object.note2_answer1 == 'Нет' %}checked{% endif %}>Нет</label>
                             <label style="margin-left: 15px">Инфо</label>
-                            <label style="margin-left: 15px"><input type="radio" name="note2_answer2" value="Да">Да
-                                <input type="radio" name="note2_answer2" value="Нет">Нет</label>
+                            <label style="margin-left: 15px"><input type="radio" name="note2_answer2" value="Да" {% if object.note2_answer2 == 'Да' %}checked{% endif %}>Да
+                                <input type="radio" name="note2_answer2" value="Нет" {% if object.note2_answer2 == 'Нет' %}checked{% endif %}>Нет</label>
                         </div>
 
                     </div>
                     <div class="row" style="margin-top: 10px">
                         <div class="input-group">
                             <label>Тип</label>
-                            <input type="text" name="note3_type" class="form-control" style="margin-left: 5px">
+                            <input type="text" name="note3_type" class="form-control" style="margin-left: 5px" value="{{ object.note3_type }}">
                             <label style="margin-left: 5px">: A</label>
-                            <input type="text" name="note3_text" class="form-control" style="margin-left: 5px">
-                            <label style="margin-left: 15px"><input type="radio" name="note3_answer1" value="Да">Да
-                                <input type="radio" name="note3_answer1" value="Нет">Нет</label>
+                            <input type="text" name="note3_text" class="form-control" style="margin-left: 5px" value="{{ object.note3_text }}">
+                            <label style="margin-left: 15px"><input type="radio" name="note3_answer1" value="Да" {% if object.note3_answer1 == 'Да' %}checked{% endif %}>Да
+                                <input type="radio" name="note3_answer1" value="Нет" {% if object.note3_answer1 == 'Нет' %}checked{% endif %}>Нет</label>
                             <label style="margin-left: 15px">Инфо</label>
-                            <label style="margin-left: 15px"><input type="radio" name="note3_answer2" value="Да">Да
-                                <input type="radio" name="note3_answer2" value="Нет">Нет</label>
+                            <label style="margin-left: 15px"><input type="radio" name="note3_answer2" value="Да" {% if object.note3_answer2 == 'Да' %}checked{% endif %}>Да
+                                <input type="radio" name="note3_answer2" value="Нет" {% if object.note3_answer2 == 'Нет' %}checked{% endif %}>Нет</label>
                         </div>
 
                     </div>
@@ -596,20 +595,20 @@
                         <div class="col-md-4">
                             <div class="input-group">
                                 <label>Имя инспектора</label>
-                                <input type="text" name="name_inspector2" class="form-control" style="margin-left: 5px">
+                                <input type="text" name="name_inspector2" class="form-control" style="margin-left: 5px" value="{{ object.name_inspector2 }}">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="input-group">
                                 <label>Дата</label>
-                                <input type="date" name="date_inspector2" class="form-control" style="margin-left: 5px">
+                                <input type="date" name="date_inspector2" class="form-control" style="margin-left: 5px" value="{{ object.date_inspector2|date:"Y-m-d" }}">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="input-group">
                                 <label>Телефон</label>
                                 <input type="text" name="phone_inspector2" class="form-control"
-                                       style="margin-left: 5px">
+                                       style="margin-left: 5px" value="{{ object.phone_inspector2 }}">
                             </div>
                         </div>
 
@@ -619,21 +618,21 @@
                         <div class="col-md-4">
                             <div class="input-group">
                                 <label>Тип2</label>
-                                <input type="text" name="type_inspector2" class="form-control" style="margin-left: 5px">
+                                <input type="text" name="type_inspector2" class="form-control" style="margin-left: 5px" value="{{ object.type_inspector2 }}">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="input-group">
                                 <label>Подсистема</label>
                                 <input type="text" name="subsystem_inspector2" class="form-control"
-                                       style="margin-left: 5px">
+                                       style="margin-left: 5px" value="{{ object.subsystem_inspector2 }}">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="input-group">
                                 <label>Количество</label>
                                 <input type="text" name="count_inspector2" class="form-control"
-                                       style="margin-left: 5px">
+                                       style="margin-left: 5px" value="{{ object.count_inspector2 }}">
                             </div>
                         </div>
                     </div>
@@ -645,20 +644,20 @@
                         <div class="col-md-4">
                             <div class="input-group">
                                 <label>Имя инспектора</label>
-                                <input type="text" name="name_inspector3" class="form-control" style="margin-left: 5px">
+                                <input type="text" name="name_inspector3" class="form-control" style="margin-left: 5px" value="{{ object.name_inspector3 }}">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="input-group">
                                 <label>Дата</label>
-                                <input type="date" name="date_inspector3" class="form-control" style="margin-left: 5px">
+                                <input type="date" name="date_inspector3" class="form-control" style="margin-left: 5px" value="{{ object.date_inspector3|date:"Y-m-d" }}">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="input-group">
                                 <label>Подпись</label>
                                 <input type="text" name="signature_inspector" class="form-control"
-                                       style="margin-left: 5px">
+                                       style="margin-left: 5px" value="{{ object.signature_inspector }}">
                             </div>
                         </div>
 
