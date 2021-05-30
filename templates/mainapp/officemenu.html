@@ -1,6 +1,6 @@
 {% extends 'mainapp/base.html' %}
 {% block title %}
-    Главная
+    Офис меню
 {% endblock %}
 {% block content %}
     <main>
@@ -20,7 +20,7 @@
                 {% for template in object_list %}
                     <tr>
                         <th scope="row">{{ forloop.counter }}</th>
-                        <td><a href="" download="">Скачать шаблон</a></td>
+                        <td><a href="/media/templates1/template1_{{ template.id }}.docx"  download="">Скачать шаблон</a></td>
                         <td>
                             {{ template.inspector }}
                         </td>

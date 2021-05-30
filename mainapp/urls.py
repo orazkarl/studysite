@@ -13,7 +13,8 @@ urlpatterns = [
 
     path('office-menu/', views.OfficeMenuView.as_view(), name='officemenu'),
     path('office-menu/template1/detail/<int:pk>', views.OfficeMenuTemplate1DetailView.as_view(), name='officemenutemplate_detail'),
-    path('office-menu/contacts/list', views.ContactsListView.as_view(), name='officemenucontacts_list')
+    path('office-menu/contacts/list', views.ContactsListView.as_view(), name='officemenucontacts_list'),
 
+    path('client-menu/', views.ClientMenuView.as_view(), name='clientmenu'),
 
 ]

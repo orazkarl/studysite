@@ -1,6 +1,6 @@
 {% extends 'mainapp/base.html' %}s
 {% block title %}
-    Главная
+    Изменить статус
 {% endblock %}
 {% block content %}
     <main>
@@ -30,8 +30,18 @@
         <hr>
         <div class="form">
             <form method="post">
-                {#                    {% csrf_token %}#}
+            <input type="hidden" name="template1" value="{{ object.id }}">
+                {% csrf_token %}
                 <h2 class="fw-bold">Привязать клиент(ы)</h2>
+                {% for client in clients %}
+                    <div class="form-group">
+                        <h3>{{ client.first_name }} {{ client.last_name }}</h3>
+                        <label>Выбрать</label>
+                        <input type="checkbox" class="checkbox" name="clients" value="{{ client.id }}" {% if object in client.client_templates1.all  %}checked{% endif %}>
+                    </div>
+                    <br>
+                {% endfor %}
+                <input type="submit" class="btn btn-primary" name="bind_client">
             </form>
         </div>
     </main>

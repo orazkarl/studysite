@@ -1,13 +1,13 @@
 {% extends 'mainapp/base.html' %}
 {% block title %}
-    Главная
+    Создать шаблон
 {% endblock %}
 {% block content %}
     <main>
         <h2 class="display-6 text-center mb-4">Создать шаблон</h2>
 
         <div class="form">
-            <form method="post">
+            <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 <input type="hidden" name="inspector" value="{{ request.user.id }}">
                 <div class="container">
@@ -456,7 +456,7 @@
                         </div>
                         <div class="col-md-4">
                             <label>Подпись </label>
-                            <p>{{ form.table2_signature_1}}</p>
+                            <p>{{ form.table2_signature1 }}</p>
 
                         </div>
                     </div>
@@ -471,7 +471,7 @@
                         </div>
                         <div class="col-md-4">
                             <label>Подпись </label>
-                            <p>{{ form.table2_signature_2}}</p>
+                            <p>{{ form.table2_signature2}}</p>
 
                         </div>
                     </div>

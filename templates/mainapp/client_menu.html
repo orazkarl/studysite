@@ -1,0 +1,30 @@
+{% extends 'mainapp/base.html' %}
+{% block title %}
+    Клиент меню
+{% endblock %}
+{% block content %}
+    <main>
+        <h2 class="display-6 text-center mb-4">Клиент меню</h2>
+        <div class="table-responsive">
+            <table class="table text-center">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Шаблон</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for template in templates1 %}
+                    <tr>
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td>
+                            <a href="/media/templates1/template1_{{ template.id }}.docx" download="">Скачать шаблон</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+{% endblock %}
