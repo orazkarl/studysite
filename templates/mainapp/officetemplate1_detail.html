@@ -1,0 +1,39 @@
+{% extends 'mainapp/base.html' %}s
+{% block title %}
+    Главная
+{% endblock %}
+{% block content %}
+    <main>
+        <h2 class="display-6 text-center mb-4">Изменить статус для <a href="">{{ object }}</a></h2>
+        <div class="form">
+            <form method="post">
+                {% csrf_token %}
+                <input type="hidden" name="template1" value="{{ object.id }}">
+                <div class="row col-md-8">
+                    <h2 class="fw-bold">Статус</h2>
+                    <div class="col-md-3">
+                        <input type="radio" name="template1_status" value="True"
+                               {% if object.template1_status == True %}checked{% endif %} required>
+                        <label class="col-form-label-lg" style="color: green">Одобрить</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="radio" name="template1_status" value="False"
+                               {% if object.template1_status == False %}checked{% endif %} required>
+                        <label class="col-form-label-lg " style="color: red">Отказать</label>
+                    </div>
+
+                </div>
+                <input type="submit" class="btn btn-primary" name="change_status">
+
+            </form>
+        </div>
+        <hr>
+        <div class="form">
+            <form method="post">
+                {#                    {% csrf_token %}#}
+                <h2 class="fw-bold">Привязать клиент(ы)</h2>
+            </form>
+        </div>
+    </main>
+
+{% endblock %}

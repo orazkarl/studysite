@@ -2,6 +2,8 @@ from django.db import models
 
 from user_auth.models import User
 
+
+
 class Template1(models.Model):
     ANSWER_TABLE1 = (
         ('Да', 'Да'),
@@ -81,10 +83,10 @@ class Template1(models.Model):
     #Table 2
     table2_name_inspector1 = models.CharField(max_length=50, null=True, blank=True)
     table2_date1 = models.DateField(null=True, blank=True)
-    table2_signature1 = models.CharField(max_length=50, null=True, blank=True)
+    table2_signature1 = models.ImageField(upload_to='signatures/', null=True, blank=True)
     table2_name_inspector2 = models.CharField(max_length=50, null=True, blank=True)
     table2_date2 = models.DateField(null=True, blank=True)
-    table2_signature2 = models.CharField(max_length=50, null=True, blank=True)
+    table2_signature2 = models.ImageField(upload_to='signatures/', null=True, blank=True)
 
     number_order3 = models.CharField(max_length=50, null=True, blank=True)
     number1 = models.CharField(max_length=50, null=True, blank=True)
@@ -120,6 +122,20 @@ class Template1(models.Model):
 
     name_inspector3 = models.CharField(max_length=50, null=True, blank=True)
     date_inspector3 = models.DateField(null=True, blank=True)
-    signature_inspector = models.CharField(max_length=50, null=True, blank=True)
+    signature_inspector = models.ImageField(upload_to='signatures/', null=True, blank=True)
 
     inspector = models.ForeignKey(User, on_delete=models.CASCADE, related_name='templates1', verbose_name='Инспектор')
+    template1_status = models.BooleanField(default=False)
+
+
+class ContactsComments(models.Model):
+    name = models.CharField(max_length=20)
+    email = models.EmailField(max_length=20)
+    comment = models.TextField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Вопрос'
+        verbose_name_plural = 'Вопросы из стр контакты'

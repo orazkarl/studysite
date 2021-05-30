@@ -7,7 +7,7 @@
         <h2 class="display-6 text-center mb-4">Изменить шаблон</h2>
 
         <div class="form">
-            <form method="post">
+            <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 <input type="hidden" name="inspector" value="{{ request.user.id }}">
                 <div class="container">
@@ -455,7 +455,7 @@
                         </div>
                         <div class="col-md-4">
                             <label>Подпись </label>
-                            <input type="text" name="table2_signature1" class="form-control" value="{{ object.table2_name_inspector1 }}">
+                            <p>{{ form.table2_signature1 }}</p>
                         </div>
                     </div>
                     <div class="row">
@@ -469,7 +469,7 @@
                         </div>
                         <div class="col-md-4">
                             <label>Подпись </label>
-                            <input type="text" name="table2_signature2" class="form-control" value="{{ object.table2_signature2 }}">
+                            <p>{{ form.table2_signature2 }}</p>
                         </div>
                     </div>
                 </div>
@@ -656,8 +656,8 @@
                         <div class="col-md-4">
                             <div class="input-group">
                                 <label>Подпись</label>
-                                <input type="text" name="signature_inspector" class="form-control"
-                                       style="margin-left: 5px" value="{{ object.signature_inspector }}">
+                                <p>{{ form.signature_inspector }}</p>
+
                             </div>
                         </div>
 

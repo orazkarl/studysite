@@ -37,11 +37,29 @@
                 deserunt mollit anim id est laborum.
             </p>
         </div>
-        <div class="form">
-            <h6 class="display-6 text-center mb-4"></h6>
-            <form action="">
-                <input type="text" class="form-control">
-            </form>
+        <div class="form ">
+            <h6 class="display-6 text-center mb-4">Оставить сообщение</h6>
+            <div class="w-50" style="margin-left: auto; margin-right: auto">
+                <form action="." method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label class="col-form-label-lg">Имя</label>
+                        <input type="text" class="form-control" name="name" placeholder="Имя"  maxlength="20" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label-lg">E-mail</label>
+                        <input type="email" class="form-control" name="email" placeholder="E-mail" maxlength="20" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label-lg">Комментарий</label>
+                        <textarea name="comment" id="" cols="30" rows="10" class="form-control" placeholder="Ваш комментарий . . . " maxlength="100" required></textarea>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary">
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
 {% endblock %}

@@ -13,6 +13,7 @@
                     <th scope="col">#</th>
                     <th scope="col">Шаблон</th>
                     <th scope="col">Инспектор</th>
+                    <th scope="col">Статус</th>
                     <th></th>
                 </tr>
                 </thead>
@@ -24,6 +25,13 @@
                         <td>
                             {{ template.inspector }}
                         </td>
+                    <td>
+                        {% if template.template1_status %}
+                            <span style="color: green">Одобрено</span>
+                        {% else %}
+                            <span style="color: red">Отказано</span>
+                        {% endif %}
+                    </td>
                         <td>
                             {% if template.inspector == request.user %}
                                 <a href="{% url 'template1_detail_update' template.id %}" class="btn btn-primary">Изменить</a>
