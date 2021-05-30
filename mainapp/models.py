@@ -1,8 +1,8 @@
 import os
 from django.db import models
 
-
 from studysite.settings import BASE_DIR, AUTH_USER_MODEL
+from docx2pdf import convert
 
 from docxtpl import DocxTemplate, InlineImage
 from docx.shared import Mm
@@ -88,10 +88,10 @@ class Template1(models.Model):
     #Table 2
     table2_name_inspector1 = models.CharField(max_length=50, null=True, blank=True)
     table2_date1 = models.DateField(null=True, blank=True)
-    table2_signature1 = models.ImageField(upload_to='signatures/', null=True, blank=True)
+    table2_signature1 = models.ImageField(upload_to='signatures/', null=True)
     table2_name_inspector2 = models.CharField(max_length=50, null=True, blank=True)
     table2_date2 = models.DateField(null=True, blank=True)
-    table2_signature2 = models.ImageField(upload_to='signatures/', null=True, blank=True)
+    table2_signature2 = models.ImageField(upload_to='signatures/', null=True)
 
     number_order3 = models.CharField(max_length=50, null=True, blank=True)
     number1 = models.CharField(max_length=50, null=True, blank=True)
@@ -127,10 +127,11 @@ class Template1(models.Model):
 
     name_inspector3 = models.CharField(max_length=50, null=True, blank=True)
     date_inspector3 = models.DateField(null=True, blank=True)
-    signature_inspector = models.ImageField(upload_to='signatures/', null=True, blank=True)
+    signature_inspector = models.ImageField(upload_to='signatures/', null=True)
 
     inspector = models.ForeignKey(AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='templates1', verbose_name='Инспектор')
     template1_status = models.BooleanField(default=False)
+
 
 
     def save(self, *args, **kwargs):
@@ -215,6 +216,8 @@ class Template1(models.Model):
 
             tpl.render(context)
             tpl.save('mediafiles/templates1/template1_' + str(self.id) + '.docx')
+            convert("mediafiles/templates1/template1_' + str(self.id) + '.docx", "mediafiles/templates1/template1_' + str(self.id) + '.pdf")
+
         super().save(*args, **kwargs)
 
 

@@ -22,7 +22,8 @@
                     <tr>
                         <th scope="row">{{ forloop.counter }}</th>
                         <td>
-                            <a href="/media/templates1/template1_{{ template.id }}.docx" download="">Скачать шаблон</a>
+{#                            <a href="/media/templates1/template1_{{ template.id }}.docx" download="">Скачать шаблон</a>#}
+                            <a href="/media/templates1/template1_{{ template.id }}.pdf" download="">Скачать шаблон</a>
                         </td>
                         <td>
                             {{ template.inspector }}
